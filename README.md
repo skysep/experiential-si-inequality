@@ -46,55 +46,35 @@ Places → Reviews → ABSA → Quality Index → Exposure → Inequality
 
 ```
 1. Place extraction/
-2. Review_scraping/
-3. Review_parsing/
-4. Sample_annotation/
-5. Agent_validation/
-6. ABSA_results/
-7. ABSA_Analysis/
-8. Wellbeing analysis/
+2. Agent_validation/
+3. ABSA_results/
+4. Analysis/
 data/
 ```
 
 ### 1. Place extraction  
 Retrieves social infrastructure locations using APIs (e.g., Google Places).  
-Outputs structured place-level datasets.
+Outputs structured place-level datasets. Then collects large-scale user reviews with batching and rate limiting.  
 
-### 2. Review_scraping  
-Collects large-scale user reviews with batching and rate-limit handling.  
 
-### 3. Review_parsing  
-Cleans and structures text for downstream modeling:
-- Filtering  
-- Tokenization  
-- Formatting for ABSA  
-
-### 4. Sample_annotation  
-Human-labeled dataset for validation and benchmarking.  
-
-### 5. Agent_validation  
+### 2. Agent_validation  
 Design and evaluation of the multi-agent ABSA system, including:
 - Prompt engineering  
 - Supervisor validation logic  
 - Consistency checks  
 
-### 6. ABSA_results  
+### 3. ABSA_results  
 Outputs from ABSA:
 - Aspect terms  
 - Opinion terms  
 - Sentiment labels  
 
-### 7. ABSA_Analysis  
+### 4. ABSA_Analysis  
 Transforms ABSA outputs into quality metrics:
 - Aspect aggregation  
 - Weighting (review-weighted / TF-IDF inspired)  
 - Place-level quality index  
 
-### 8. Wellbeing analysis  
-Final analytical layer:
-- Population-weighted exposure  
-- Inequality metrics  
-- Regression models (with controls and fixed effects)  
 
 ### data/  
 Intermediate and processed datasets (subject to sharing constraints).
@@ -153,7 +133,6 @@ Each module is independent and can be adapted or reused.
 
 - Python ≥ 3.10  
 - pandas, numpy, geopandas  
-- scikit-learn, statsmodels  
 - DSPy / LangGraph (for agent orchestration)  
 - API access (e.g., Google Places)
 
@@ -169,16 +148,6 @@ Due to platform restrictions:
 
 ---
 
-## 📌 Key Contribution
-
-This repository introduces a new measurement paradigm:
-
-- Moves beyond access-based metrics  
-- Captures lived experience at scale  
-- Reveals hidden inequalities in infrastructure systems  
-- Provides a scalable framework for SDG-relevant monitoring  
-
----
 
 ## 📖 Citation
 
@@ -188,19 +157,3 @@ If you use this repository, please cite:
 Beyond Access: Lived-Experience Narratives Reveal Hidden Inequalities in Social Infrastructure Quality
 ```
 
----
-
-## 🤝 Acknowledgements
-
-This work integrates advances in:
-- Crowdsourced data analysis  
-- Natural language processing  
-- Multi-agent AI systems  
-- Spatial inequality modeling  
-
----
-
-## 📬 Contact
-
-For questions, collaborations, or data access:  
-[Add your email or GitHub profile]
