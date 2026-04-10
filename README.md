@@ -77,7 +77,7 @@ Transforms ABSA outputs into quality metrics:
 
 
 ### data/  
-Intermediate and processed datasets (subject to sharing constraints).
+You can have access to the raw data using https://doi.org/10.5281/zenodo.19491726. 
 
 ---
 
